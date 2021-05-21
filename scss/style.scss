@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Zen+Dots&display=swap');
+
+/***************
+Variables
+***************/
+$greenLight: #6ad2b7;
+$aqua: #68c4d4;
+$white: #fff;
+$lightBlue: #74a6d2;
+$darkBlue: #1060a7;
+$black: black;
+$ligthGray: #ececed;
+$fontSize: 16px;
+$fontFamily: 'Open Sans', sans-serif;
+$transition: .4s ease-in-out;
+
+/***************
+Mixins
+***************/
+@mixin btn {
+    background-color: $greenLight;
+    padding: 15px 80px;
+    color: $white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    &:hover {
+        background-color: $lightBlue;
+        transition: $transition;
+        cursor: pointer;
+    }
+}    
+    
+    
+/***************
+Basic styles
+***************/
+body {
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    color: $black;
+    line-height: 1.6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Zen Dots', cursive;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/***************
+Navigation
+***************/
+header {
+    background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../img/cars-on-golden-gate-bridge-from-battery-spencer-viewpoint-picjumbo-com.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        .logo {
+            color: $white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: 'Zen Dots', cursive;
+            font-size: 1.7rem;
+            &:hover {
+                color: $lightBlue;
+                transition: $transition;
+            }
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                margin-left: 50px;
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $white;
+                    &:hover {
+                        color: $lightBlue;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+        text-align: center;
+        h1 {
+            color: $white;
+            font-size: 4rem;
+            &::after {
+                display: block;
+                content: "";
+                width: 15%;
+                height: 4px;
+                background-color: $white;
+                border: none;
+                margin: 30px auto;
+            }
+        }
+        p {
+            color: $white;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/***************
+One
+***************/
+.one {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .colText {
+        background-color: $greenLight;
+        flex: 0 0 55%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            color: $white;
+            font-size: 2rem;
+            text-align: center;
+        }
+    } 
+    .colBg {
+        background-image: url(../img/home-office-picjumbo-com.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 60vh;
+        flex: 0 0 45%;
+    }
+    .text {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 40px;
+        height: 45vh;
+        width: 30%;
+        position: absolute;
+        top: 70px;
+        left: 750px;
+        h4 {
+            font-size: 1.4rem;
+            padding-bottom: 40px;
+        }
+        p {
+            padding-bottom: 40px;
+            line-height: 1.8;
+        }
+        button {
+            @include btn; 
+        }
+    }
+}
+
+/***************
+Two
+***************/
+
+.two {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .colText {
+        background-color: $aqua;
+        flex: 0 0 55%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            color: $white;
+            font-size: 2rem;
+            text-align: center;
+        }
+    } 
+    .colBg {
+        background-image: url(../img/laptop-on-a-round-wooden-table-flat-lay-picjumbo-com.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 60vh;
+        flex: 0 0 45%;
+    }
+    .text {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 40px;
+        height: 45vh;
+        width: 30%;
+        position: absolute;
+        top: 70px;
+        left: 570px;
+        h4 {
+            font-size: 1.4rem;
+            padding-bottom: 40px;
+        }
+        p {
+            padding-bottom: 40px;
+            line-height: 1.8;
+        }
+        button {
+            @include btn; 
+            background-color: $aqua;
+        }
+    }
+}
+
+/***************
+Three
+***************/
+.three {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    .colText {
+        background-color: $lightBlue;
+        flex: 0 0 55%;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            color: $white;
+            font-size: 2rem;
+            text-align: center;
+        }
+    } 
+    .colBg {
+        background-image: url(../img/msft-stock-exchange-chart-picjumbo-com.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 60vh;
+        flex: 0 0 45%;
+    }
+    .text {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 40px;
+        height: 45vh;
+        width: 30%;
+        position: absolute;
+        top: 70px;
+        left: 750px;
+        h4 {
+            font-size: 1.4rem;
+            padding-bottom: 40px;
+        }
+        p {
+            padding-bottom: 40px;
+            line-height: 1.8;
+        }
+        button {
+            @include btn;
+            background-color: $lightBlue;
+            &:hover {
+                background-color: $greenLight;
+            }
+        }
+    }
+}
+
+/***************
+Four
+***************/
+.four {
+    background-image: linear-gradient($darkBlue,$lightBlue);
+    text-align: center;
+    padding: 40px 0;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .text {
+        background-color: $white;
+        padding: 50px;
+        h2 {
+            font-size: 2rem;
+            padding-bottom: 30px;
+        }
+        p {
+            padding-bottom: 30px;
+        }
+        button {
+            @include btn;
+            background-color: $lightBlue;
+            &:hover {
+                background-color: $greenLight;
+            } 
+        }
+    }
+}
+
+/***************
+Fifth
+***************/
+.fifth {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .col {
+        flex: 0 0 32%;
+        border: 1px solid $black;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .text {
+            padding: 20px;
+            text-align: center;
+            h3 {
+                font-size: 1.7rem;
+            }
+            p {
+                padding: 20px 0;
+            }
+            button {
+                @include btn;
+            }
+        }
+    }
+}
+
+/***************
+Sixth
+***************/
+.sixth {
+    background-color: $greenLight;
+    text-align: center;
+    padding: 50px 0;
+    color: $white;
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+    }
+    p {
+        padding: 20px 0;
+    }
+    input[type="text"] {
+        padding: 11px 10px 8px 10px;
+        width: 20%;
+    }
+    input[type="submit"] {
+        padding: 9px 40px;
+        border: none;
+        font-size: 1rem;
+        margin-top: 2px;
+    }
+}
+
+/***************
+Footer
+***************/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 70px 0;
+    .col {
+        flex: 0 0 33%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
